@@ -36,6 +36,10 @@ function Login() {
           exit={{ x: "-100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
+          <div className="back-arrow" onClick={() => (window.location.href = "/")}>
+            <i className="fa-solid fa-arrow-left"></i>
+          </div>
+
           <h2>Hi, Welcome Back!</h2>
           <p>Start your day with us.</p>
 

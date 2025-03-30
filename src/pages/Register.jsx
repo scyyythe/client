@@ -54,7 +54,11 @@ function Register() {
           </div>
         </div>
         <div className="form">
+          <div className="back-arrow-register" onClick={() => (window.location.href = "/")}>
+            <i className="fa-solid fa-arrow-left"></i>
+          </div>
           <h2>Create new account</h2>
+
           <p>Start your day with us.</p>
 
           <div className="con-form">
@@ -189,7 +193,7 @@ function Register() {
             <div className="or-div">
               <span>By signing up, I agree to the Terms of Service and Privacy Policy</span>
             </div>
-            <div className="go-to-login">
+            <div className=" or-div">
               <span>Already have an account?</span>
               <a href="/login">Login</a>
             </div>

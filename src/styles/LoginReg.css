@@ -1,3 +1,8 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
 .login-container {
   max-width: 1500px;
   padding: 2rem;
@@ -38,6 +43,29 @@
   border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 14px;
+}
+.back-arrow {
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  position: relative;
+  right: 50%;
+  transition: color 0.3s ease;
+}
+.back-arrow-register {
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  position: relative;
+  right: 45%;
+  transition: color 0.3s ease;
+}
+
+.back-arrow-register:hover {
+  color: #345b6e;
+}
+.back-arrow:hover {
+  color: #345b6e;
 }
 
 .form {
