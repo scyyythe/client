@@ -212,3 +212,45 @@
   position: relative;
   left: 45%;
 }
+/* register */
+img {
+  max-width: 400px;
+}
+.first-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.go-to-login {
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  position: relative;
+  bottom: 1rem;
+}
+.go-to-login a {
+  text-decoration: none;
+  color: #577c8e;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 10px;
+
+  font-size: 12px;
+}
+.back-arrow {
+  position: relative;
+  bottom: 1rem;
+  cursor: pointer;
+}

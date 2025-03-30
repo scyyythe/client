@@ -22,11 +22,14 @@ function Forgot() {
               <label htmlFor="email">Email</label>
               <br />
               <div className="input-container-forgot">
-                <i className="fa-regular fa-at"></i>
                 <input type="email" name="email" placeholder="Email Address" required />
               </div>
 
-              <button>Send Reset Link</button>
+              <button>
+                <a href="/reset" className="forgot-link">
+                  <Link to="/reset">Send Request Link</Link>
+                </a>
+              </button>
               <br />
             </div>
             <div className="link">

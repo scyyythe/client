@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AnimatedWrapper from "../components/AnimatedWrapper";
-import "../styles/Login.css";
+import "../styles/LoginReg.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Login() {
@@ -22,8 +22,20 @@ function Login() {
 
   return (
     <AnimatedWrapper>
-      <motion.div className="login-container" exit={{ opacity: 0 }}>
-        <motion.div className="form" exit={{ x: "-100%", opacity: 0 }} transition={{ duration: 0.5 }}>
+      <motion.div
+        className="login-container"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.div
+          className="form"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: "-100%", opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2>Hi, Welcome Back!</h2>
           <p>Start your day with us.</p>
 
@@ -94,7 +106,13 @@ function Login() {
           </div>
         </motion.div>
 
-        <motion.div className="right-con" exit={{ x: "100%", opacity: 0 }} transition={{ duration: 0.5 }}>
+        <motion.div
+          className="right-con"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: "100%", opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="image">
             <img src="/images/login.png" alt="login" />
           </div>
