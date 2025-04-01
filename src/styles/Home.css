@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
 .home-container {
   text-align: center;
   padding: 50px;
@@ -84,4 +88,124 @@ p {
   position: relative;
   display: inline-block;
   transition: width 0.5s ease-out;
+}
+
+/* guest */
+.guest-page {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding-inline: 10rem;
+}
+
+.card-guest {
+  margin-inline: auto;
+  max-width: 700px;
+  background-color: #f1f8fb;
+  padding-inline: 8rem;
+  padding-block: 2rem;
+  border-radius: 50px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+.card-guest p {
+  font-size: 13px;
+  line-height: 2;
+}
+.card-head p {
+  font-size: 13px;
+  line-height: 2;
+}
+.card-head h1 {
+  font-weight: 800;
+}
+.form-card {
+  padding-block: 2rem;
+  padding-inline: 3rem;
+  background-color: #f5f5f5;
+  width: 70%;
+  text-align: left !important;
+}
+.form-card label {
+  font-size: 13px;
+}
+.form-card input {
+  margin-top: 1rem;
+  width: 85% !important;
+}
+.form-card button {
+  width: 100% !important;
+  padding: 15px;
+  border-radius: 20px !important;
+}
+
+/* vbiew bill */
+.guest-page2 {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top: 4rem;
+  padding-inline: 10rem;
+}
+
+.card-guest-bill {
+  margin-inline: auto;
+  max-width: 300px;
+  background-color: #f1f8fb;
+  padding-inline: 5rem;
+  padding-block: 2rem;
+  border-radius: 50px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.center-card-guest2 {
+  margin-top: 1rem;
+
+  text-align: left;
+}
+.center-card-guest2 input {
+  width: 100% !important;
+}
+.card-guest-bill label {
+  font-size: 13px;
+}
+.center-card-guest {
+  display: flex;
+  text-align: left;
+  font-size: 13px;
+  gap: 3rem;
+}
+
+.input-container-guest input {
+  padding: 15px;
+  border-style: none;
+  font-size: 12px;
+  border-radius: 10px;
+  margin-top: 0.6rem;
+  width: 100%;
+}
+.center-card-guest2 button {
+  margin-block: 1rem;
+  width: 100% !important;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.input-guest-bill {
+  margin-top: 2rem;
+  width: 90%;
+}
+.center-card-guest2 a {
+  text-align: left;
+  font-size: 13px;
+  color: #345b6e;
+  margin-top: 1rem;
 }
