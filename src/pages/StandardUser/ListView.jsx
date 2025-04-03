@@ -5,7 +5,7 @@ function ListView() {
     <>
       <UserHeader />
       <div className="user-dashboard-page">
-        <h3>Add New List</h3>
+        <h3>List Information</h3>
         <div className="list-view-content">
           <p>This is the List View page.</p>
         </div>

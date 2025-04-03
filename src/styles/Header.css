@@ -317,3 +317,11 @@ body {
   cursor: pointer;
   text-align: left;
 }
+.premuim-btn {
+  margin-right: 1rem;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  border-style: none;
+  color: #345b6e;
+}

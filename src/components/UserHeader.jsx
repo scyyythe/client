@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Header.css";
-
 function UserHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -32,6 +31,7 @@ function UserHeader() {
       </div>
 
       <div className="profile-section" ref={menuRef}>
+        <button className="premuim-btn">Premuim</button>
         <div className="profile-info" onClick={() => setMenuOpen(!menuOpen)}>
           <img src="/images/profile.jpg" alt="User Profile" className="profile-pic" />
           <span className="username">Angel</span>
