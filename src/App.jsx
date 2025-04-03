@@ -8,7 +8,9 @@ import Forgot from "./pages/Forgot";
 import Reset from "./pages/ResetPassword";
 import Guest from "./pages/guest/Guest";
 import ViewGuestBill from "./pages/guest/ViewBill";
-
+import UserDashboard from "./pages/StandardUser/UserDashboard";
+import ListView from "./pages/StandardUser/ListView";
+import AddList from "./pages/StandardUser/AddList";
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -22,6 +24,9 @@ function AnimatedRoutes() {
         <Route path="/reset" element={<Reset />} />
         <Route path="/guest" element={<Guest />} />
         <Route path="/guest-bill" element={<ViewGuestBill />} />
+        <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/list-view" element={<ListView />} />
+        <Route path="/add-list" element={<AddList />} />
       </Routes>
     </AnimatePresence>
   );

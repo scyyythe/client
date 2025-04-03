@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import AnimatedWrapper from "../components/AnimatedWrapper";
 import "../styles/LoginReg.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -11,6 +11,7 @@ function Login() {
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate for redirection
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,6 +19,18 @@ function Login() {
 
   const togglePassword = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Simulate authentication (Replace with actual login API request)
+    if (formData.username && formData.password) {
+      console.log("Login successful!"); // Debugging
+      navigate("/dashboard"); // Redirect to UserDashboard
+    } else {
+      alert("Please enter username and password");
+    }
   };
 
   return (
@@ -57,7 +70,7 @@ function Login() {
               <span>Or Sign in with Email</span>
             </div>
 
-            <form>
+            <form onSubmit={handleLogin}>
               <label htmlFor="username">Username</label>
               <div className="input-container">
                 <i className="fa-regular fa-at"></i>

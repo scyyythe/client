@@ -1,0 +1,118 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal h4 {
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  width: 30%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #f1f1f1;
+}
+
+.confirm-btn {
+  background-color: #577c8e;
+  color: white;
+}
+
+.add-list-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.add-list-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+.add-list-modal label {
+  font-size: 13px;
+}
+.add-list-modal input {
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+.add-list-name-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-list-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-list-cancel-btn,
+.add-list-confirm-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-list-cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-list-confirm-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.add-list-cancel-btn:hover,
+.add-list-confirm-btn:hover {
+  opacity: 0.8;
+}
+
+.input-container-add-list {
+  text-align: left;
+
+  input {
+    width: 90%;
+  }
+}
