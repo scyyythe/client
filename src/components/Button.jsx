@@ -8,8 +8,8 @@ const Button = ({ text, onClick, className, disabled }) => {
       disabled={disabled}
       style={{
         padding: "10px 20px",
-        backgroundColor: "#577C8E",
-        color: "white",
+        backgroundColor: " #577c8e49",
+        color: "#345b6e",
         border: "none",
         borderRadius: "5px",
         cursor: disabled ? "not-allowed" : "pointer",

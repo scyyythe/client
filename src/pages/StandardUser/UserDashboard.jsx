@@ -6,7 +6,7 @@ import Modal from "../../components/Modal";
 import { Link, useNavigate } from "react-router-dom";
 
 function UserDashboard() {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [actionType, setActionType] = useState("");
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ function UserDashboard() {
   const handleOptionClick = (option) => {
     setActionType(option);
     setShowModal(true);
-    setShowMenu(false);
+    setShowMenu({});
   };
 
   const handleModalClose = () => {
@@ -27,8 +27,14 @@ function UserDashboard() {
 
   const handleConfirmAction = () => {
     alert(`${actionType} confirmed!`);
-
     setShowModal(false);
+  };
+
+  const toggleMenu = (id) => {
+    setShowMenu((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
   };
 
   return (
@@ -45,6 +51,7 @@ function UserDashboard() {
           </div>
 
           <div className="up-body">
+            {/* Card 1 */}
             <div className="list-card-con">
               <Link to="/list-view" className="list-card-link">
                 <div className="list-card">
@@ -69,13 +76,13 @@ function UserDashboard() {
                   className="three-dots"
                   onClick={(e) => {
                     e.stopPropagation();
-                    setShowMenu(!showMenu);
+                    toggleMenu("food");
                   }}
                 >
                   &#x22EE;
                 </span>
 
-                {showMenu && (
+                {showMenu["food"] && (
                   <div className="options-menu">
                     <ul>
                       <li onClick={() => handleOptionClick("Edit")}>Edit</li>
@@ -87,11 +94,12 @@ function UserDashboard() {
               </div>
             </div>
 
+            {/* Card 2 */}
             <div className="list-card-con">
               <Link to="/list-view" className="list-card-link">
                 <div className="list-card">
                   <div className="list-img">
-                    <img src="/images/travel.jpg" alt="Food Expense" className="image-list" />
+                    <img src="/images/travel.jpg" alt="Travel Expense" className="image-list" />
                   </div>
 
                   <div className="card-content">
@@ -111,13 +119,13 @@ function UserDashboard() {
                   className="three-dots"
                   onClick={(e) => {
                     e.stopPropagation();
-                    setShowMenu(!showMenu);
+                    toggleMenu("travel");
                   }}
                 >
                   &#x22EE;
                 </span>
 
-                {showMenu && (
+                {showMenu["travel"] && (
                   <div className="options-menu">
                     <ul>
                       <li onClick={() => handleOptionClick("Edit")}>Edit</li>

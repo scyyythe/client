@@ -116,3 +116,27 @@
     width: 90%;
   }
 }
+
+/* input field */
+.input-field {
+  margin-bottom: 15px;
+}
+
+.input-field label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #577c8e;
+}
