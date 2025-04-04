@@ -32,7 +32,7 @@ function UserHeader() {
       </div>
 
       <div className="profile-section" ref={menuRef}>
-        <button className="premuim-btn">Upgrade</button>
+        {/* <button className="premuim-btn">Upgrade</button> */}
         <div className="profile-info" onClick={() => setMenuOpen(!menuOpen)}>
           <img src="/images/profile.jpg" alt="User Profile" className="profile-pic" />
           <span className="username">Angel</span>

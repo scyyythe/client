@@ -11,6 +11,9 @@ import ViewGuestBill from "./pages/guest/ViewBill";
 import UserDashboard from "./pages/StandardUser/UserDashboard";
 import ListView from "./pages/StandardUser/ListView";
 import AddList from "./pages/StandardUser/AddList";
+import SendCode from "./pages/StandardUser/SendCode";
+import Settings from "./pages/Settings";
+import Archived from "./pages/Archived";
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -27,6 +30,9 @@ function AnimatedRoutes() {
         <Route path="/dashboard" element={<UserDashboard />} />
         <Route path="/list-view" element={<ListView />} />
         <Route path="/add-list" element={<AddList />} />
+        <Route path="/send-code" element={<SendCode />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/archived" element={<Archived />} />
       </Routes>
     </AnimatePresence>
   );

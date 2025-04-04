@@ -51,7 +51,6 @@ function UserDashboard() {
           </div>
 
           <div className="up-body">
-            {/* Card 1 */}
             <div className="list-card-con">
               <Link to="/list-view" className="list-card-link">
                 <div className="list-card">
@@ -94,7 +93,6 @@ function UserDashboard() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="list-card-con">
               <Link to="/list-view" className="list-card-link">
                 <div className="list-card">

@@ -243,12 +243,29 @@
   color: #ddd;
 }
 .input-list-con {
-  width: 40%;
-  margin-inline: auto;
+  width: 70%;
+  margin-left: 5rem;
   margin-top: 1rem;
 }
+.add-participant {
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
 .input-list-con input {
   width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: black;
+}
+.input-list-con label {
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: inline-block;
 }
 .input-list-con button {
   width: 100%;
@@ -256,6 +273,53 @@
   border-radius: 5px;
   border: 1px solid #ddd;
   font-size: 14px !important;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   cursor: pointer;
+}
+.top-field label {
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.input-fields {
+  display: flex;
+  padding-inline: 6rem;
+}
+
+.top-field {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.add-another {
+  cursor: pointer;
+  font-size: 13px;
+  position: relative;
+  bottom: 1rem;
+}
+
+/* list view */
+
+.image-bill {
+  width: 15%;
+  height: 150px;
+}
+.image-bill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+/* send code */
+.info-container {
+  margin-top: 2rem;
+}
+.info-content {
+  border-style: solid;
+  width: 100%;
+}
+.info-container h3 {
+  color: #345b6e;
 }

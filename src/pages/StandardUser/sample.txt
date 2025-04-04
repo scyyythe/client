@@ -1,0 +1,32 @@
+import React from "react";
+import { useLocation } from "react-router-dom";
+import UserHeader from "../../components/UserHeader";
+import "../../styles/UserDashboard.css";
+
+function ViewDashboard() {
+  const location = useLocation();
+  const listData = location.state?.listData || {};
+
+  return (
+    <>
+      <UserHeader />
+      <div className="user-dashboard-page">
+        <div className="back-button">
+          <h3>Share Bill</h3>
+        </div>
+
+        <p>
+          <strong>Title:</strong> {listData.title}
+        </p>
+        <p>
+          <strong>Currency:</strong> {listData.currency}
+        </p>
+        {listData.image && <img src={listData.image} alt="Uploaded" style={{ maxWidth: "200px" }} />}
+        <h3>Participants:</h3>
+        <ul>{listData.participants && listData.participants.map((p, index) => <li key={index}>{p}</li>)}</ul>
+      </div>
+    </>
+  );
+}
+
+export default ViewDashboard;

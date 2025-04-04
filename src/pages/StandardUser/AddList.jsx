@@ -4,11 +4,18 @@ import UserHeader from "../../components/UserHeader";
 import "../../styles/UserDashboard.css";
 import InputField from "../../components/InputField";
 import Button from "../../components/Button";
+import CurrencySelector from "../../components/Currency";
+
 function ListView() {
   const navigate = useNavigate();
   const [image, setImage] = useState(null);
-  const [title, setTitle] = useState(""); // Add a state for the title
+  const [title, setTitle] = useState("");
+  const [participants, setParticipants] = useState([""]);
+  const [currency, setCurrency] = useState("PHP - Philippine Peso");
 
+  const handleCurrencyChange = (e) => {
+    setCurrency(e.target.value);
+  };
   const handleBackClick = () => {
     navigate("/dashboard");
   };
@@ -28,6 +35,26 @@ function ListView() {
     setTitle(e.target.value);
   };
 
+  const handleParticipantChange = (index, event) => {
+    const updatedParticipants = [...participants];
+    updatedParticipants[index] = event.target.value;
+    setParticipants(updatedParticipants);
+  };
+
+  const addParticipant = () => {
+    setParticipants([...participants, ""]);
+  };
+  const handleCreateList = () => {
+    const listData = {
+      title,
+      currency,
+      image,
+      participants,
+    };
+
+    console.log("List Data Submitted:", listData);
+    navigate("/send-code", { state: { listData } });
+  };
   return (
     <>
       <UserHeader />
@@ -39,26 +66,51 @@ function ListView() {
           <h3>Create New List</h3>
         </div>
 
-        <div className="upload">
-          <div className="image-preview" id="image-preview">
-            {!image && <i className="fa fa-plus plus-sign"></i>}
-            {image && <img src={image} alt="Image Preview" />}
+        <div className="input-fields">
+          <div className="upload">
+            <div className="image-preview" id="image-preview">
+              {!image && <i className="fa fa-plus plus-sign"></i>}
+              {image && <img src={image} alt="Image Preview" />}
+            </div>
+            <label htmlFor="file-input" className="upload-label">
+              <i className="fa fa-cloud-upload"></i> Upload Image
+            </label>
+            <input type="file" id="file-input" accept="image/*" className="file-input" onChange={handleFileChange} />
           </div>
-          <label htmlFor="file-input" className="upload-label">
-            <i className="fa fa-cloud-upload"></i> Upload Image
-          </label>
-          <input type="file" id="file-input" accept="image/*" className="file-input" onChange={handleFileChange} />
-        </div>
 
-        <div className="input-list-con">
-          <InputField
-            label="List Title"
-            id="list-title"
-            value={title} // Bind the input value to the state
-            onChange={handleTitleChange} // Handle the input change
-            placeholder="Enter List Title" // Set a string as the placeholder
-          />
-          <Button text="Create List" className="create-list-btn" onClick={() => alert("List Created!")} />
+          <div className="input-list-con">
+            <div className="top-field">
+              <InputField
+                label="Bill Title"
+                id="list-title"
+                value={title}
+                onChange={handleTitleChange}
+                placeholder="Enter List Title"
+              />
+              <div>
+                <label htmlFor="currency">Select Currency</label>
+                <CurrencySelector selectedCurrency={currency} onChange={handleCurrencyChange} />
+              </div>
+            </div>
+
+            <div className="add-participant">
+              {participants.map((participant, index) => (
+                <InputField
+                  key={index}
+                  label={`Participant ${index + 1}`}
+                  id={`participant-${index}`}
+                  value={participant}
+                  onChange={(e) => handleParticipantChange(index, e)}
+                  placeholder="Enter Participant Name"
+                />
+              ))}
+              <p className="add-another" onClick={addParticipant}>
+                + Add another participant
+              </p>
+            </div>
+
+            <Button text="Create List" className="create-list-btn" onClick={handleCreateList} />
+          </div>
         </div>
       </div>
     </>
