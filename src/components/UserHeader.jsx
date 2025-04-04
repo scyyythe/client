@@ -27,11 +27,12 @@ function UserHeader() {
   return (
     <header className="header">
       <div className="logo">
+        <img src="/images/BIL SPLIT.png" alt="Logo" className="logo" />
         <h1>SharePay</h1>
       </div>
 
       <div className="profile-section" ref={menuRef}>
-        <button className="premuim-btn">Premuim</button>
+        <button className="premuim-btn">Upgrade</button>
         <div className="profile-info" onClick={() => setMenuOpen(!menuOpen)}>
           <img src="/images/profile.jpg" alt="User Profile" className="profile-pic" />
           <span className="username">Angel</span>

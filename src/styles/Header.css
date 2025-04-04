@@ -229,6 +229,8 @@ body {
   margin-left: 8rem;
   font-size: 13px;
 }
+
+/* user header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -237,6 +239,7 @@ body {
   padding-left: 20px;
   padding-right: 3rem;
   position: relative;
+  border-bottom: #e2e4e6cb 1px solid;
 }
 .header .logo h1 {
   margin: 0;
@@ -324,4 +327,15 @@ body {
   border-radius: 10px;
   border-style: none;
   color: #345b6e;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  color: #345b6e;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  object-fit: cover;
 }

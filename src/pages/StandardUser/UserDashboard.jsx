@@ -27,6 +27,7 @@ function UserDashboard() {
 
   const handleConfirmAction = () => {
     alert(`${actionType} confirmed!`);
+
     setShowModal(false);
   };
 
@@ -44,45 +45,89 @@ function UserDashboard() {
           </div>
 
           <div className="up-body">
-            <Link to="/list-view" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="list-card">
-                <div className="list-img">
-                  <img src="/images/list-view.png" alt="User Profile" className="image-list" />
-                </div>
+            <div className="list-card-con">
+              <Link to="/list-view" className="list-card-link">
+                <div className="list-card">
+                  <div className="list-img">
+                    <img src="/images/food.jpg" alt="Food Expense" className="image-list" />
+                  </div>
 
-                <div className="card-title">
-                  <h3>Food Expense</h3>
-                  <p>
-                    My Balance: <span>PHP 350</span>
-                  </p>
-                </div>
-
-                <div className="card-date">
-                  <p>April 1</p>
-                </div>
-
-                <div className="options">
-                  <span
-                    className="three-dots"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setShowMenu(!showMenu);
-                    }}
-                  >
-                    &#x22EE;
-                  </span>
-                  {showMenu && (
-                    <div className="options-menu">
-                      <ul>
-                        <li onClick={() => handleOptionClick("Edit")}>Edit</li>
-                        <li onClick={() => handleOptionClick("Delete")}>Delete</li>
-                        <li onClick={() => handleOptionClick("Archive")}>Archive</li>
-                      </ul>
+                  <div className="card-content">
+                    <div className="card-title">
+                      <h3>Food Expense</h3>
+                      <p>
+                        My Balance: <span>PHP 350</span>
+                      </p>
                     </div>
-                  )}
+                    <div className="card-date">April 1</div>
+                  </div>
                 </div>
+              </Link>
+
+              <div className="options">
+                <span
+                  className="three-dots"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowMenu(!showMenu);
+                  }}
+                >
+                  &#x22EE;
+                </span>
+
+                {showMenu && (
+                  <div className="options-menu">
+                    <ul>
+                      <li onClick={() => handleOptionClick("Edit")}>Edit</li>
+                      <li onClick={() => handleOptionClick("Delete")}>Delete</li>
+                      <li onClick={() => handleOptionClick("Archive")}>Archive</li>
+                    </ul>
+                  </div>
+                )}
               </div>
-            </Link>
+            </div>
+
+            <div className="list-card-con">
+              <Link to="/list-view" className="list-card-link">
+                <div className="list-card">
+                  <div className="list-img">
+                    <img src="/images/travel.jpg" alt="Food Expense" className="image-list" />
+                  </div>
+
+                  <div className="card-content">
+                    <div className="card-title">
+                      <h3>Travel Expense</h3>
+                      <p>
+                        My Balance: <span>PHP 350</span>
+                      </p>
+                    </div>
+                    <div className="card-date">April 1</div>
+                  </div>
+                </div>
+              </Link>
+
+              <div className="options">
+                <span
+                  className="three-dots"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowMenu(!showMenu);
+                  }}
+                >
+                  &#x22EE;
+                </span>
+
+                {showMenu && (
+                  <div className="options-menu">
+                    <ul>
+                      <li onClick={() => handleOptionClick("Edit")}>Edit</li>
+                      <li onClick={() => handleOptionClick("Delete")}>Delete</li>
+                      <li onClick={() => handleOptionClick("Archive")}>Archive</li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
