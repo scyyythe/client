@@ -8,12 +8,12 @@ import Forgot from "./pages/Forgot";
 import Reset from "./pages/ResetPassword";
 import Guest from "./pages/guest/Guest";
 import ViewGuestBill from "./pages/guest/ViewBill";
-import UserDashboard from "./pages/StandardUser/UserDashboard";
 import ListView from "./pages/StandardUser/ListView";
 import AddList from "./pages/StandardUser/AddList";
 import SendCode from "./pages/StandardUser/SendCode";
 import Settings from "./pages/Settings";
 import Archived from "./pages/Archived";
+import StandardDashboard from "./pages/StandardUser/StandardDashboard";
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -27,7 +27,7 @@ function AnimatedRoutes() {
         <Route path="/reset" element={<Reset />} />
         <Route path="/guest" element={<Guest />} />
         <Route path="/guest-bill" element={<ViewGuestBill />} />
-        <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/dashboard" element={<StandardDashboard />} />
         <Route path="/list-view" element={<ListView />} />
         <Route path="/add-list" element={<AddList />} />
         <Route path="/send-code" element={<SendCode />} />
