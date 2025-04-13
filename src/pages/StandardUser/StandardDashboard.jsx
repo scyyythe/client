@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../styles/Standard.css";
-import Settings from "../../components/Settings"; 
+import Dashboard from "./Dashboard";
+import Settings from "../../components/Settings";
+import Archived from "./Archived";
 
 function StandardDashboard() {
   const [activePage, setActivePage] = useState("dashboard");
@@ -10,9 +12,9 @@ function StandardDashboard() {
       case "settings":
         return <Settings />;
       case "list":
-        return <div><h1>Messages</h1><p>This is your list view.</p></div>;
+        return <Archived />;
       default:
-        return <div><h1>Dashboard</h1><p>Welcome back!</p></div>;
+        return <Dashboard />;
     }
   };
 
@@ -29,7 +31,7 @@ function StandardDashboard() {
             <i className="fas fa-tachometer-alt"></i> Dashboard
           </a>
           <a onClick={() => setActivePage("list")}>
-            <i className="fas fa-comments"></i> Messages
+            <i className="fas fa-archive"></i> Archived
           </a>
           <a onClick={() => setActivePage("settings")}>
             <i className="fas fa-cogs"></i> Settings
@@ -40,15 +42,15 @@ function StandardDashboard() {
         </nav>
 
         <div className="foot">
-          <h4>Let's upgrade <br /> to premium features</h4>
+          <h4>
+            Let's upgrade <br /> to premium features
+          </h4>
           <p>Upgrade to premium and get exclusive features</p>
           <img src="/images/Untitled design.png" alt="Upgrade Images" />
         </div>
       </aside>
 
-      <main className="main">
-        {renderContent()}
-      </main>
+      <main className="main">{renderContent()}</main>
     </div>
   );
 }

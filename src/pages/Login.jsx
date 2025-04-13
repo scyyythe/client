@@ -11,7 +11,7 @@ function Login() {
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate for redirection
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,10 +24,9 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Simulate authentication (Replace with actual login API request)
     if (formData.username && formData.password) {
-      console.log("Login successful!"); // Debugging
-      navigate("/dashboard"); // Redirect to UserDashboard
+      console.log("Login successful!");
+      navigate("/dashboard");
     } else {
       alert("Please enter username and password");
     }
