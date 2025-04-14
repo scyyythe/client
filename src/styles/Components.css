@@ -180,7 +180,16 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #3948673a;
+}
+
 .card h3 {
   font-weight: 500;
   font-size: 15px;
@@ -245,6 +254,31 @@
 .options-btn:hover {
   color: #333;
 }
+.options-menu {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.options-menu li {
+  padding: 10px 15px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.2s ease;
+}
+
+.options-menu li:hover {
+  background-color: #f0f0f0;
+}
+
 /* settings */
 .settings-con {
   width: 100%;
@@ -302,4 +336,287 @@
   color: white;
   font-size: 12px;
   cursor: pointer;
+}
+
+/* create modal */
+.create-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.create-modal-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  height: 83%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.create-modal-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.create-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.create-modal-input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.create-modal-submit-btn {
+  padding: 0.75rem;
+  background-color: #394867;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  bottom: 4rem;
+}
+
+.create-modal-submit-btn:hover {
+  background-color: #14274e;
+}
+
+.create-modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.create-modal-close-btn:hover {
+  color: #000;
+}
+/* Image Preview */
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.file-input {
+  display: none;
+}
+
+.image-preview {
+  width: 200px;
+  height: 100px;
+  border: 2px dashed #394867;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.upload-box-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #14274e;
+  font-size: 12px;
+  text-align: center;
+  gap: 8px;
+}
+
+.upload-box-label img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.remove-img-text {
+  color: red;
+  cursor: pointer;
+  font-size: 10px;
+  margin-top: 8px;
+  text-decoration: underline;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+.form-input {
+  position: relative;
+  bottom: 1.5rem;
+}
+.form-input input {
+  position: relative;
+  bottom: 0.5rem;
+  width: 95%;
+  padding-block: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding-inline: 10px;
+  font-size: 12px;
+}
+.form-input textarea {
+  position: relative;
+  bottom: 0.5rem;
+  width: 95%;
+  padding-block: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding-inline: 10px;
+  font-size: 12px;
+  resize: none;
+}
+.code {
+  position: relative;
+  bottom: 1rem;
+}
+.btn-generate {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    width: 50%;
+    background-color: rgba(0, 128, 0, 0.144);
+    border: none;
+    padding-block: 0.5rem;
+    position: relative;
+    bottom: 0.5rem;
+    border-radius: 10px;
+    color: green;
+    cursor: pointer;
+    font-size: 12px;
+  }
+}
+.add-user {
+  position: relative;
+  bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-user input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.add-user button {
+  padding: 10px 15px;
+  background-color: #c2d2f1;
+  color: #14274e;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.added {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  bottom: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+.added::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  background-color: #bfe2f3;
+  color: #14274e;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.remove-x {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: #14274e;
+}
+.remove-x:hover {
+  color: #394867;
+}
+.error-message {
+  color: red;
+  font-size: 10px;
+}
+
+/* error */
+.error-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.error-popup-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+}
+
+.error-popup-box p {
+  color: rgb(189, 14, 14);
+  font-size: 12px;
+}
+
+.error-popup-close-btn {
+  background-color: rgb(160, 12, 12);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 10px;
+  color: white;
+}
+
+.error-popup-close-btn:hover {
+  background-color: darkred;
 }
