@@ -3,18 +3,24 @@ import "../../styles/Standard.css";
 import Dashboard from "./Dashboard";
 import Settings from "../../components/Settings";
 import Archived from "./Archived";
+import CardDetails from "./CardDetails";
 
 function StandardDashboard() {
   const [activePage, setActivePage] = useState("dashboard");
+  const [selectedCard, setSelectedCard] = useState(null);
 
   const renderContent = () => {
+    if (selectedCard) {
+      return <CardDetails data={selectedCard} onBack={() => setSelectedCard(null)} />;
+    }
+
     switch (activePage) {
       case "settings":
         return <Settings />;
       case "list":
         return <Archived />;
       default:
-        return <Dashboard />;
+        return <Dashboard onCardClick={(card) => setSelectedCard(card)} />;
     }
   };
 
@@ -27,13 +33,28 @@ function StandardDashboard() {
         </div>
 
         <nav>
-          <a onClick={() => setActivePage("dashboard")}>
+          <a
+            onClick={() => {
+              setActivePage("dashboard");
+              setSelectedCard(null);
+            }}
+          >
             <i className="fas fa-tachometer-alt"></i> Dashboard
           </a>
-          <a onClick={() => setActivePage("list")}>
+          <a
+            onClick={() => {
+              setActivePage("list");
+              setSelectedCard(null);
+            }}
+          >
             <i className="fas fa-archive"></i> Archived
           </a>
-          <a onClick={() => setActivePage("settings")}>
+          <a
+            onClick={() => {
+              setActivePage("settings");
+              setSelectedCard(null);
+            }}
+          >
             <i className="fas fa-cogs"></i> Settings
           </a>
           <a onClick={() => alert("Logging out...")}>

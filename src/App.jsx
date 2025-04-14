@@ -8,7 +8,7 @@ import Forgot from "./pages/Forgot";
 import Reset from "./pages/ResetPassword";
 import Guest from "./pages/guest/Guest";
 import ViewGuestBill from "./pages/guest/ViewBill";
-
+import CardDetails from "./pages/StandardUser/CardDetails";
 import SendCode from "./pages/StandardUser/SendCode";
 import Settings from "./pages/Settings";
 
@@ -29,6 +29,7 @@ function AnimatedRoutes() {
         <Route path="/dashboard" element={<StandardDashboard />} />
         <Route path="/send-code" element={<SendCode />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/card-details" element={<CardDetails />} />
       </Routes>
     </AnimatePresence>
   );

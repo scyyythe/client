@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const Card = ({ category, description, date, imageUrl, onEdit, onDelete, onArchive }) => {
+const Card = ({ category, description, date, imageUrl, onEdit, onDelete, onArchive, onClick }) => {
   const [showOptions, setShowOptions] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -14,11 +14,18 @@ const Card = ({ category, description, date, imageUrl, onEdit, onDelete, onArchi
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleCardClick = (e) => {
+    if (dropdownRef.current && dropdownRef.current.contains(e.target)) {
+      return;
+    }
+    onClick?.();
+  };
+
   return (
-    <div className="card relative">
-      <div className="card-header flex justify-between items-center">
+    <div className="card" onClick={handleCardClick}>
+      <div className="card-header">
         <h3 className="category-name">{category}</h3>
-        <div className="options relative" ref={dropdownRef}>
+        <div className="options" ref={dropdownRef}>
           <button className="options-btn" onClick={() => setShowOptions(!showOptions)}>
             •••
           </button>
