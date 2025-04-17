@@ -6,7 +6,9 @@ import AnimatedWrapper from "../components/anim/AnimatedWrapper";
 import "../styles/Home.css";
 import About from "../components/pages/About";
 import { useNavigate } from "react-router-dom";
-import Plans from "./Plans";
+import Contact from "../components/pages/Contact";
+import Plans from "../components/pages/Plans";
+import Footer from "../components/pages/Footer";
 function Home() {
   const navigate = useNavigate();
   return (
@@ -50,6 +52,12 @@ function Home() {
 
           <section id="plans">
             <Plans />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+          <section id="footer">
+            <Footer />
           </section>
         </div>
       </AnimatedWrapper>

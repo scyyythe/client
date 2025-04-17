@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../styles/Home.css";
+import "../../styles/Home.css";
 import { FaRocket, FaPaperPlane, FaSmile } from "react-icons/fa";
 
 function Plans() {
