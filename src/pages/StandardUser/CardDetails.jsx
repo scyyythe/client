@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import ParticipantModal from "../../components/ParticipantModal";
-import ExpenseCard from "../../components/ExpenseCard";
-import NewExpenseModal from "../../components/NewExpense";
-
+import ParticipantModal from "../../components/popup/ParticipantModal";
+import ExpenseCard from "../../components/card/ExpenseCard";
+import NewExpenseModal from "../../components/popup/NewExpense";
+import UpdateModal from "../../components/popup/UpdateModal";
 const CardDetails = ({ data, onBack }) => {
   const [showExpenseModal, setShowExpenseModal] = useState(false);
   const [showParticipantModal, setShowParticipantModal] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-
+  const [showModal, setShowModal] = useState(false);
   const handleCreate = (expense) => {
     console.log("Created Expense:", expense);
-    // call API or update state
   };
 
   const onEdit = () => console.log("Edit clicked");
@@ -48,7 +47,7 @@ const CardDetails = ({ data, onBack }) => {
                 </div>
               </div>
               <div className="view-part">
-                <button>
+                <button onClick={() => setShowModal(true)}>
                   <i className="fa fa-cog"></i> Edit
                 </button>
                 <p onClick={() => setShowParticipantModal(true)} style={{ cursor: "pointer" }}>
@@ -93,7 +92,7 @@ const CardDetails = ({ data, onBack }) => {
           </div>
         </div>
       </div>
-
+      <UpdateModal isOpen={showModal} onClose={() => setShowModal(false)} />
       <ParticipantModal isOpen={showParticipantModal} onClose={() => setShowParticipantModal(false)} />
     </div>
   );

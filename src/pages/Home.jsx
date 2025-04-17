@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { textVariants, buttonVariants } from "../utils/motionVariants";
-import Header from "../components/Header";
-import AnimatedWrapper from "../components/AnimatedWrapper";
+import Header from "../components/pages/Header";
+import AnimatedWrapper from "../components/anim/AnimatedWrapper";
 import "../styles/Home.css";
-import About from "../components/About";
+import About from "../components/pages/About";
 import { useNavigate } from "react-router-dom";
-
+import Plans from "./Plans";
 function Home() {
   const navigate = useNavigate();
   return (
@@ -44,9 +44,12 @@ function Home() {
             </div>
           </div>
 
-          {/* About Section */}
           <section id="about">
             <About />
+          </section>
+
+          <section id="plans">
+            <Plans />
           </section>
         </div>
       </AnimatedWrapper>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import UserHeader from "../../components/UserHeader";
-import Card from "../../components/Card";
-import CreateModal from "../../components/CreateModal";
+import UserHeader from "../../components/pages/UserHeader";
+import Card from "../../components/card/Card";
+import CreateModal from "../../components/popup/CreateModal";
 
 function Dashboard({ onCardClick }) {
   const [showModal, setShowModal] = useState(false);

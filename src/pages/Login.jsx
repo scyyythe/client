@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
-import AnimatedWrapper from "../components/AnimatedWrapper";
+import { Link, useNavigate } from "react-router-dom";
+import AnimatedWrapper from "../components/anim/AnimatedWrapper";
 import "../styles/LoginReg.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/Standard.css";
 import Dashboard from "./Dashboard";
-import Settings from "../../components/Settings";
+import Settings from "../../components/pages/Settings";
 import Archived from "./Archived";
 import CardDetails from "./CardDetails";
 
@@ -29,7 +29,7 @@ function StandardDashboard() {
       <aside className="sidebar">
         <div className="head-side">
           <img src="/images/icons8-receipt-48.png" alt="Receipt Icon" />
-          <h1>SplitBill</h1>
+          <h1>SharePay</h1>
         </div>
 
         <nav>

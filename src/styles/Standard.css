@@ -551,3 +551,49 @@ h4 {
   background: #ccc;
   color: #333;
 }
+
+/* archiewd */
+.archived-container {
+  padding: 24px;
+}
+
+.archived-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  color: #14274e;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #14274e;
+  color: #14274e;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 16px;
+}
+
+.tab-heading {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Components.css";
+import "../../styles/Components.css";
 import ErrorPopup from "./ErrorPopup";
 import { motion, AnimatePresence } from "framer-motion";
 const CreateModal = ({ isOpen, onClose }) => {

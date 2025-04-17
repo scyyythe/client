@@ -1,4 +1,4 @@
-import AnimatedWrapper from "../components/AnimatedWrapper";
+import AnimatedWrapper from "../components/anim/AnimatedWrapper";
 import "../styles/Header.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from "react-router-dom";

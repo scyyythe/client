@@ -100,7 +100,7 @@
     padding: 1rem;
     width: 100%;
     border-radius: 20px;
-    background-color: #577c8e;
+    background-color: #14274e;
     border: none;
     color: white;
     position: relative;
@@ -129,7 +129,7 @@
   transition: background-color 0.3s ease-in-out;
 }
 .login-button:hover {
-  background-color: #345b6e;
+  background-color: #394867;
 }
 .buttons button {
   background-color: transparent;

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import "../styles/Home.css";
+import "../../styles/Home.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const HowItWorks = () => {

@@ -5,7 +5,7 @@ body {
 .home-container {
   text-align: center;
   padding: 50px;
-  background: linear-gradient(135deg, #fceaff, #e0f7fa);
+  /* background: linear-gradient(135deg, #fceaff, #e0f7fa); */
 }
 h1 {
   font-weight: 500;
@@ -22,7 +22,7 @@ h1 {
 }
 
 .btn {
-  background-color: #577c8e;
+  background-color: #14274e;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -33,7 +33,7 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #345b6e;
+  background-color: #394867;
   transform: scale(1.05);
 }
 
@@ -208,4 +208,149 @@ p {
   font-size: 13px;
   color: #345b6e;
   margin-top: 1rem;
+}
+
+/* plans */
+.pricing-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+.pricing-section h3 {
+  color: #14274e;
+  font-size: 20px;
+}
+.pricing-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #14274e;
+}
+
+.pricing-subtitle {
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  color: #888;
+  font-size: 14px;
+}
+
+.toggle-switch {
+  width: 50px;
+  height: 24px;
+  background: #dcdcdc;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  background: #14274e;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 26px;
+  transition: 0.3s;
+}
+
+.billing-toggle .active {
+  color: #14274e;
+}
+
+.save {
+  font-size: 0.8rem;
+  color: #28a745;
+}
+
+.plans-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.plan-box {
+  background: #f9f9f9;
+  padding: 2rem;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.plan-box:hover {
+  transform: translateY(-5px);
+}
+
+.plan-icon {
+  font-size: 2rem;
+  color: #14274e;
+  margin-bottom: 1rem;
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.plan-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #14274e;
+  margin-bottom: 1rem;
+}
+
+.plan-price span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.plan-features li {
+  margin: 1rem 0;
+  font-size: 13px;
+}
+
+.start-button {
+  padding: 0.75rem 1.5rem;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-button:hover {
+  background: #d6d6d6;
+}
+
+.active-plan {
+  background: #f1edff;
+  border: 2px solid #14274e;
+}
+
+.start-button.active {
+  background: #14274e;
+  color: white;
 }
